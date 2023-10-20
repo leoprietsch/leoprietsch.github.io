@@ -8,4 +8,31 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background: #fefae0;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+button,
+input[type="submit"] {
+  outline: none;
+  border: none;
+}
+
+button:hover,
+input[type="submit"] {
+  cursor: pointer;
+  transform: translateY(-0.25em);
+}
+
+li,
+a {
+  text-decoration: none;
 }
