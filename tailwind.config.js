@@ -7,6 +7,8 @@ export default {
         moss: "#606C38",
         pakistan: "#283618",
         cornsilk: "#FEFAE0",
+        sage: "#647E68",
+        offwhite: "#D8D8D8",
       },
     },
   },
