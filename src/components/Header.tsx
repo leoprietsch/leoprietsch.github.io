@@ -9,7 +9,7 @@ const Header = () => {
         href="https://www.linkedin.com/in/leoprietsch/"
       >
         <img className="h-8" src={linkedInSvg} />
-        <p className="text-offwhite text-xl">LinkedIn</p>
+        <p className="text-xl text-offwhite">LinkedIn</p>
       </a>
       <a
         className="flex items-center"
@@ -17,7 +17,7 @@ const Header = () => {
         href="https://github.com/leoprietsch"
       >
         <img className="h-8" src={linkedInSvg} />
-        <p className="text-offwhite text-xl">GitHub</p>
+        <p className="text-xl text-offwhite">GitHub</p>
       </a>
     </nav>
   );
