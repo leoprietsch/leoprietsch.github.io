@@ -1,9 +1,9 @@
-name: Deploy Angular App to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main # Trigger deployment only on main branch push
+      - master
 
 jobs:
   build:
