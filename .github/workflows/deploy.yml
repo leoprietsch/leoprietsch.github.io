@@ -22,9 +22,9 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build -- --base-href="/nome-do-repositorio/"
+        run: npm run build -- --base-href="/leoprietsch.github.io/"
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/nome-do-projeto
+        run: npx angular-cli-ghpages --dir=dist/my-website
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
