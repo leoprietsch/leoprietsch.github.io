@@ -6,12 +6,21 @@ on:
       - master
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -23,6 +32,15 @@ jobs:
 
       - name: Build Project
         run: npm run build -- --base-href="/leoprietsch.github.io/"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # upload entire directory
+          path: "./dist/personal-website"
 
       - name: Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/personal-website
